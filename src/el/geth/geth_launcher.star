@@ -255,11 +255,11 @@ def get_config(
         "geth",
         # Disable path based storage scheme for electra fork and verkle
         # TODO: REMOVE Once geth default db is path based, and builder rebased
-        "{0}".format(
-            "--state.scheme=path"
-            if "verkle" not in network and not gcmode_archive
-            else ""
-        ),
+        # "{0}".format(
+        #     "--state.scheme=path"
+        #     if "verkle" not in network and not gcmode_archive
+        #     else ""
+        # ),
         # Override prague fork timestamp for electra fork
         "{0}".format("--cache.preimages" if "verkle" in network else ""),
         # Override prague fork timestamp
